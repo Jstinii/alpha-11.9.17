@@ -57,17 +57,17 @@ void autonomous() {
 
   resetIMEs();
   while(imeLeft > -1200){ // drive back to the zones
-    updateDrive(-1200);
+    updateDrive(-1200, 0);
     drive(drivePowerLeft, drivePowerRight);
   }
 
   while(gyroGet(gyro) < 135){ // turn to be parallel with 10 pt bar
-    updateTurn(135);
+    updateTurn(135 , 0);
     drive(drivePowerLeft/2, drivePowerRight);
   }
 
   while(gyroGet(gyro) < 225){ // turn to face the 10pt bar
-    updateTurn(225);
+    updateTurn(225, 0);
     drive(0, drivePowerRight);
   }
 
